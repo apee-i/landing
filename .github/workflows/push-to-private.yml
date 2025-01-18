@@ -40,9 +40,9 @@ jobs:
           echo "::notice::${num_files_updated} files were updated"
           if (( num_files_updated > 0 )); then
             git config --local user.name "github-bot"
-            git config user.email "github-bot.noreply@github.com"
+            git config --local user.email "github-bot.noreply@github.com"
             git add .
             git commit -m "this-repo triggered: Updated ${num_files_updated} files"
-            git push -u origin main
+            git push -u origin master
           fi
 

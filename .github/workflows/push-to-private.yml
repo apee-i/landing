@@ -40,8 +40,8 @@ jobs:
           echo "::notice::${num_files_updated} files were updated"
           if (( num_files_updated > 0 )); then
             git checkout -b master
-            git config --local user.name "github-bot"
-            git config --local user.email "github-bot.noreply@github.com"
+            git config --local user.name "IbraheemHaseeb7"
+            git config --local user.email "ibraheemhaseeb7@gmail.com"
             git add .
             git commit -m "this-repo triggered: Updated ${num_files_updated} files"
             git push -u origin master --force

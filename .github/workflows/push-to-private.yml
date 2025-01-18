@@ -12,16 +12,20 @@ jobs:
     steps:
     - name: Check out the code
       uses: actions/checkout@v3
+      with:
+        repo: IbraheemHaseeb7/apee-i-frontend.git
+        ref: main
+        token: ${{ secrets.PAT_TOKEN }}
 
     - name: Set up Git
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-    - name: Add Private as remote
+    - name: Add and Commit
       run: | 
-        git remote remove origin
-        git remote add origin https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/IbraheemHaseeb7/apee-i-frontend.git
+        git add .
+        git commit -m "${{ github.event.head_commit.message }}" 
 
     - name: Push code to Private repo
       run: |

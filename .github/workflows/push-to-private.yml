@@ -19,7 +19,7 @@ jobs:
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
     - name: Add Private as remote
-      run: git remote add origin https://<your-token>@github.com/IbraheemHaseeb7/apee-i.git
+        run: git remote add origin https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/IbraheemHaseeb7/apee-i.git
 
     - name: Push code to Private repo
       run: |

@@ -21,7 +21,7 @@ jobs:
     - name: Add Private as remote
       run: | 
         git remote remove origin
-        git remote add origin https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/IbraheemHaseeb7/apee-i-frontend
+        git remote add origin https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/IbraheemHaseeb7/apee-i-frontend.git
 
     - name: Push code to Private repo
       run: |

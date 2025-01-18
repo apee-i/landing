@@ -21,9 +21,21 @@ jobs:
           path: apee-i-frontend
           fetch-depth: 0
 
+      - name: Checkout current repo
+        uses: actions/checkout@v4
+        with:
+          repository: apee-i/landing
+          token: ${{ secrets.PAT_TOKEN }}
+          ref: main
+          path: landing
+          fetch-depth: 0
+
       - name: Push dev branch to other repo
         run : |
-          cd apee-i-frontend
+          rm -rf landing/.git
+          mv apee-i-frontend/.git landing
+          cd landing
+
           num_files_updated=$(git diff --numstat | wc -l)
           echo "::notice::${num_files_updated} files were updated"
           if (( num_files_updated > 0 )); then

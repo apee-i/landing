@@ -39,8 +39,8 @@ jobs:
           num_files_updated=$(git diff --numstat | wc -l)
           echo "::notice::${num_files_updated} files were updated"
           if (( num_files_updated > 0 )); then
-            git config user.name "${GITHUB_USER}"
-            git config user.email "${GITHUB_EMAIL}"
+            git config --local user.name "github-bot"
+            git config user.email "github-bot.noreply@github.com"
             git add .
             git commit -m "this-repo triggered: Updated ${num_files_updated} files"
             git push -u origin main

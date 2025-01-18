@@ -1,0 +1,28 @@
+name: Push to private
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  push-to-private:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out the code
+      uses: actions/checkout@v3
+
+    - name: Set up Git
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+    - name: Add Private as remote
+      run: git remote add origin https://<your-token>@github.com/IbraheemHaseeb7/apee-i.git
+
+    - name: Push code to Private repo
+      run: |
+        git push origin --all
+        git push origin --tags
+

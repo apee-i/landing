@@ -10,24 +10,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check out the code
-      uses: actions/checkout@v3
-      with:
-        repo: IbraheemHaseeb7/apee-i-frontend.git
-        ref: main
-        token: ${{ secrets.PAT_TOKEN }}
+      - uses: actions/checkout@v4
 
-    - name: Set up Git
-      run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      - name: Checkout other repo
+        uses: actions/checkout@v4
+        with:
+          repository: IbraheemHaseeb7/apee-i-frontend
+          token: ${{ secrets.PAT_TOKEN }}
+          ref: main
+          path: apee-i-frontend
+          fetch-depth: 0
 
-    - name: Add and Commit
-      run: | 
-        git add .
-        git commit -m "${{ github.event.head_commit.message }}" 
-
-    - name: Push code to Private repo
-      run: |
-        git push origin main --force
+      - name: Push dev branch to other repo
+        run : |
+          cd apee-i-frontend
+          num_files_updated=$(git diff --numstat | wc -l)
+          echo "::notice::${num_files_updated} files were updated"
+          if (( num_files_updated > 0 )); then
+            git config user.name "${GITHUB_USER}"
+            git config user.email "${GITHUB_EMAIL}"
+            git add .
+            git commit -m "this-repo triggered: Updated ${num_files_updated} files"
+            git push -u origin main
+          fi
 

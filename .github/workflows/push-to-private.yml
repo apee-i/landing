@@ -44,6 +44,6 @@ jobs:
             git config --local user.email "github-bot.noreply@github.com"
             git add .
             git commit -m "this-repo triggered: Updated ${num_files_updated} files"
-            git push -u origin master
+            git push -u origin master --force
           fi
 

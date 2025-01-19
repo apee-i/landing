@@ -9,7 +9,6 @@ import { GitHub } from "@/components/GitHub";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
-	const toCheckIfLintFailsTheDeploymentOrNot = "";
   return (
     <>
       <Navbar />

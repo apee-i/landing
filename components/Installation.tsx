@@ -13,7 +13,6 @@ const Installation = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="space-y-8 animate__animated animate__fadeInLeft">
-
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold text-cyan-400">
                 Installation Steps
@@ -28,9 +27,7 @@ const Installation = () => {
 
                 <li>Install via NPM:</li>
                 <div className="bg-neutral-800 p-4 rounded-lg">
-                  <code className="text-cyan-400">
-					npm install -g apee-i
-                  </code>
+                  <code className="text-cyan-400">npm install -g apee-i</code>
                 </div>
 
                 <li>Verify installation:</li>
@@ -72,7 +69,7 @@ const Installation = () => {
               </div>
             </div>
 
-            <div className="mt-8 p-4 bg-cyan-900/30 rounded-lg border border-cyan-500/20">
+            <div className="mt-8 p-4 bg-cyan-900/30 rounded-lg border border-cyan-500/20 w-fit">
               <p className="text-sm text-cyan-400">
                 <svg
                   className="inline-block w-5 h-5 mr-2"
@@ -87,14 +84,7 @@ const Installation = () => {
                     d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-                Need help? Check out our{" "}
-                <Link
-                  href="#documentation"
-                  className="underline hover:text-cyan-300"
-                >
-                  documentation
-                </Link>{" "}
-                or join our{" "}
+                Need help? Join our{" "}
                 <Link
                   href="#community"
                   className="underline hover:text-cyan-300"

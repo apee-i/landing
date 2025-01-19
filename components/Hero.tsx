@@ -22,11 +22,6 @@ const Hero = () => {
                   Get Started
                 </p>
               </Link>
-              <Link href="#documentation">
-                <p className="px-8 py-3 bg-neutral-700 hover:bg-neutral-600 rounded-lg text-center font-semibold transition-all duration-300">
-                  Documentation
-                </p>
-              </Link>
             </div>
           </div>
 

@@ -2,7 +2,6 @@ import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { Features } from "@/components/Features";
 import { Installation } from "@/components/Installation";
-import { Documentation } from "@/components/Documentation";
 import { Examples } from "@/components/Examples";
 import { Community } from "@/components/Community";
 import { GitHub } from "@/components/GitHub";
@@ -15,7 +14,6 @@ export default function Home() {
       <Hero />
       <Features />
       <Installation />
-      <Documentation />
       <Examples />
       <Community />
       <GitHub />

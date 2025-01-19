@@ -31,7 +31,7 @@ const Installation = () => {
                 <li>Install via Go:</li>
                 <div className="bg-neutral-800 p-4 rounded-lg">
                   <code className="text-cyan-400">
-                    go install github.com/IbraheemHaseeb7/apee-i
+                    go install github.com/apee-i/apee-i
                   </code>
                 </div>
 

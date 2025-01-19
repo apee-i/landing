@@ -9,6 +9,8 @@ jobs:
   push-to-private:
     runs-on: ubuntu-latest
 
+    needs: eslint
+
     steps:
       - uses: actions/checkout@v4
 

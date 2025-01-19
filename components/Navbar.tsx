@@ -35,11 +35,6 @@ const Navbar = () => {
                   Installation
                 </p>
               </Link>
-              <Link href="#documentation">
-                <p className="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium">
-                  Docs
-                </p>
-              </Link>
               <Link href="#examples">
                 <p className="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium">
                   Examples
@@ -109,14 +104,6 @@ const Navbar = () => {
               className="block hover:bg-neutral-700 px-3 py-2 rounded-md text-base font-medium"
             >
               Installation
-            </p>
-          </Link>
-          <Link href="#documentation">
-            <p
-              onClick={closeMobileMenu}
-              className="block hover:bg-neutral-700 px-3 py-2 rounded-md text-base font-medium"
-            >
-              Docs
             </p>
           </Link>
           <Link href="#examples">

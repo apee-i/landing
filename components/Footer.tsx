@@ -31,7 +31,7 @@ const Footer = () => {
     },
   ];
 
-  const quickLinks = ["Home", "Features", "Documentation", "Examples"];
+  const quickLinks = ["Home", "Features", "Examples"];
   const communityLinks = ["GitHub", "Discord", "Twitter", "Blog"];
   const footerLinks = ["Privacy Policy", "Terms of Service", "License"];
 

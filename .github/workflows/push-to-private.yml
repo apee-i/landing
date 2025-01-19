@@ -6,6 +6,28 @@ on:
       - main
 
 jobs:
+  eslint:
+    runs-on: ubuntu-latest
+
+    steps:
+    
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node JS
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18
+
+    - name: Install yarn
+      run: npm install -g yarn
+
+    - name: Install Deps
+      run: yarn install
+
+    - name: Run Checks
+      run: yarn run lint
+
   push-to-private:
     runs-on: ubuntu-latest
 

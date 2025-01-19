@@ -13,15 +13,6 @@ const Installation = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="space-y-8 animate__animated animate__fadeInLeft">
-            <div className="space-y-4">
-              <h3 className="text-2xl font-semibold text-cyan-400">
-                Prerequisites
-              </h3>
-              <ul className="list-disc list-inside text-neutral-300 space-y-2">
-                <li>Go 1.23.1 or higher</li>
-                <li>Git (for installation)</li>
-              </ul>
-            </div>
 
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold text-cyan-400">
@@ -32,6 +23,13 @@ const Installation = () => {
                 <div className="bg-neutral-800 p-4 rounded-lg">
                   <code className="text-cyan-400">
                     go install github.com/apee-i/apee-i
+                  </code>
+                </div>
+
+                <li>Install via NPM:</li>
+                <div className="bg-neutral-800 p-4 rounded-lg">
+                  <code className="text-cyan-400">
+					npm install -g apee-i
                   </code>
                 </div>
 

@@ -50,9 +50,9 @@ const Installation = () => {
               </h3>
               <div className="space-y-4 font-mono">
                 <div className="space-y-2">
-                  <p className="text-neutral-400"># Initialize a new project</p>
+                  <p className="text-neutral-400"># Call current pipelines</p>
                   <div className="bg-neutral-700 p-2 rounded">
-                    <code className="text-cyan-400">$ {`<some command>`}</code>
+                    <code className="text-cyan-400">$ {`apee-i`}</code>
                   </div>
                 </div>
 
